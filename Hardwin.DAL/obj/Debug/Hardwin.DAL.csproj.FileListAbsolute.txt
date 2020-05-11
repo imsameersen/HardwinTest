@@ -1,0 +1,13 @@
+E:\Projects\Self\Hardwin.DAL\bin\Debug\Hardwin.DAL.dll.config
+E:\Projects\Self\Hardwin.DAL\bin\Debug\Hardwin.DAL.dll
+E:\Projects\Self\Hardwin.DAL\bin\Debug\Hardwin.DAL.pdb
+E:\Projects\Self\Hardwin.DAL\bin\Debug\EntityFramework.dll
+E:\Projects\Self\Hardwin.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\Self\Hardwin.DAL\bin\Debug\EntityFramework.xml
+E:\Projects\Self\Hardwin.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\Self\Hardwin.DAL\obj\Debug\Hardwin.DAL.csprojAssemblyReference.cache
+E:\Projects\Self\Hardwin.DAL\obj\Debug\Hardwin.DAL.csproj.CopyComplete
+E:\Projects\Self\Hardwin.DAL\obj\Debug\Hardwin.DAL.dll
+E:\Projects\Self\Hardwin.DAL\obj\Debug\Hardwin.DAL.pdb
+E:\Projects\Self\Hardwin.DAL\bin\Debug\HardWin.Entities.dll
+E:\Projects\Self\Hardwin.DAL\bin\Debug\HardWin.Entities.pdb

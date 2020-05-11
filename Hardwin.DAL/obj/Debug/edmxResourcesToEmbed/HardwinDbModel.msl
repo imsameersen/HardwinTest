@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HardwinDbModelStoreContainer" CdmEntityContainer="HardwinDbContext">
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="HardwinDbModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspAddAccount" FunctionName="HardwinDbModel.Store.uspAddAccount" />
+    <FunctionImportMapping FunctionImportName="UserLogin" FunctionName="HardwinDbModel.Store.uspLogin" />
+    <FunctionImportMapping FunctionImportName="GetAccounts" FunctionName="HardwinDbModel.Store.GetAccounts" />
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="HardwinDbModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
