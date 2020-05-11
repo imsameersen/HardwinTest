@@ -1,0 +1,5 @@
+E:\Projects\Self\HardWin.Entities\bin\Debug\HardWin.Entities.dll
+E:\Projects\Self\HardWin.Entities\bin\Debug\HardWin.Entities.pdb
+E:\Projects\Self\HardWin.Entities\obj\Debug\HardWin.Entities.dll
+E:\Projects\Self\HardWin.Entities\obj\Debug\HardWin.Entities.pdb
+E:\Projects\Self\HardWin.Entities\obj\Debug\HardWin.Entities.csprojAssemblyReference.cache
