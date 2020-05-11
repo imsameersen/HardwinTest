@@ -1,0 +1,106 @@
+﻿@model IEnumerable<HardWin.Entities.Account>
+
+@{
+    ViewBag.Title = "Accounts";
+    var grid = new WebGrid(source: Model, canPage: true, canSort: true, ajaxUpdateContainerId: "grid", rowsPerPage: 10);
+}
+
+
+<h2>Accounts </h2>
+
+<hr />
+@using (Html.BeginForm("Index", "Account", FormMethod.Get))
+{
+    <div class="row">
+        <div class="col-md-2">
+            @Html.TextBox("fromDate", null, new { autocomplete = "off", @class = "form-control", id = "fromDate", type = "datetime", placeholder = "From Date" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.TextBox("toDate", null, new { autocomplete = "off", @class = "form-control", id = "toDate", type = "datetime", placeholder = "To Date" })
+        </div>
+        <div class="col-md-2">
+            @Html.TextBox("amount", null, new { autocomplete = "off", @class = "form-control", id = "amount", type = "number", placeholder = "Amount" })
+        </div>
+        <div class="col-md-2">
+            @Html.SubmitButton("Search", "btnSubmit", "btn-primary")
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-3">
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary pull-right  " })
+
+            <input type="button" onclick="ExportToExcel()" value="Export to Excel" class="btn btn-primary pull-right smallSpace" />
+
+        </div>
+    </div>
+}
+<hr />
+
+<div id="grid">
+    @grid.GetHtml(
+      tableStyle: "table table-striped table-list table-hover", mode: WebGridPagerModes.All,
+      firstText: "<< First",
+previousText: "< Prev",
+nextText: "Next >",
+lastText: "Last >>",
+headerStyle: "header",
+alternatingRowStyle: "alt",
+selectedRowStyle: "select",
+        columns: grid.Columns(
+            grid.Column("FirstName", "First Name"),
+            grid.Column("LastName", "Last Name"),
+            grid.Column("Email", "Email"),
+            grid.Column("Phone", "Phone"),
+            grid.Column("Address", "Address"),
+            grid.Column("Country", "Country"),
+            grid.Column("State", "State"),
+            grid.Column("Amount", "Amount", format:
+                                                                                @<text>
+                                                                                    <span class="display"><label>$ @item.Amount</label></span>
+                                                                                </text>)
+)
+)
+</div>
+
+
+
+
+<script>
+
+    function ExportToExcel() {
+        var searchParameter = {
+            "FromDate": $("#fromDate").val(),
+            "ToDate": $("#toDate").val(),
+            "Amount": $("#amount").val(),
+        }
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("DownlaodExcel","Account")',
+            contentType: "application/json; charset=utf-8",
+            data: searchParameter,
+            success: function (response) {
+                var blob = new Blob([response], { type: 'application/ms-excel' });
+                var downloadUrl = URL.createObjectURL(blob);
+                var a = document.createElement("a");
+                a.href = downloadUrl;
+                a.download = "Account.xls";
+                document.body.appendChild(a);
+                a.click();
+            },
+            error: function (xhr, status, error) {
+                $("#dataDiv").html("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+            }
+        });
+    }
+
+    $(function () {
+            $('input[type=datetime]').datepicker({
+                dateFormat: "dd/M/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-60:+0"
+            });
+        });
+</script>

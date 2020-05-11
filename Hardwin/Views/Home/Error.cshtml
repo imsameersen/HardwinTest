@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+    var controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+    var actionName = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
+}
+
+<h2>Error </h2>
+<hr />
+<table class="table table-hover">
+    <tr>
+        <td>Controller</td>
+        <td>@controllerName</td>
+    </tr>
+    <tr>
+        <td>Action Method</td>
+        <td>@actionName</td>
+    </tr>
+    <tr>
+        <td>Error Message</td>
+        <td>@ViewBag.Message</td>
+    </tr>
+    <tr>
+        <td>StackTrace</td>
+        <td>@ViewBag.StackTrace</td>
+    </tr>
+    <tr>
+        <td>Source</td>
+        <td>@ViewBag.Source</td>
+    </tr>
+
+</table>
