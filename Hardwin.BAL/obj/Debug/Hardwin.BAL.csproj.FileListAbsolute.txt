@@ -1,0 +1,13 @@
+E:\Projects\Self\Hardwin.BAL\bin\Debug\Hardwin.BAL.dll
+E:\Projects\Self\Hardwin.BAL\bin\Debug\Hardwin.BAL.pdb
+E:\Projects\Self\Hardwin.BAL\bin\Debug\Hardwin.DAL.dll
+E:\Projects\Self\Hardwin.BAL\bin\Debug\HardWin.Entities.dll
+E:\Projects\Self\Hardwin.BAL\bin\Debug\EntityFramework.dll
+E:\Projects\Self\Hardwin.BAL\bin\Debug\Hardwin.DAL.pdb
+E:\Projects\Self\Hardwin.BAL\bin\Debug\Hardwin.DAL.dll.config
+E:\Projects\Self\Hardwin.BAL\bin\Debug\HardWin.Entities.pdb
+E:\Projects\Self\Hardwin.BAL\bin\Debug\EntityFramework.xml
+E:\Projects\Self\Hardwin.BAL\obj\Debug\Hardwin.BAL.csprojAssemblyReference.cache
+E:\Projects\Self\Hardwin.BAL\obj\Debug\Hardwin.BAL.csproj.CopyComplete
+E:\Projects\Self\Hardwin.BAL\obj\Debug\Hardwin.BAL.dll
+E:\Projects\Self\Hardwin.BAL\obj\Debug\Hardwin.BAL.pdb
